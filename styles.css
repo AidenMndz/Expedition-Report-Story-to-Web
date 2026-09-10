@@ -1,0 +1,18 @@
+:root {
+  --surface: #009dff;
+  --line: #0b1f29;
+  --ink: #edf8fb;
+  --signal: #59ddff;
+}
+
+.report-shell {
+  width: min(72rem, calc(100% - 2rem));
+  margin: 0 auto;
+}
+.background {
+  background-color: var(--surface);
+  color: var(--ink);
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.5;
+  padding: 2rem;
+}  
