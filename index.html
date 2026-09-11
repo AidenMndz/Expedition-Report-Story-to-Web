@@ -1,22 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<main>
-<body>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Action Report</title>
-    <link rel="stylesheet" href="styles.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>First Expedition</title>
+
+  <link rel="stylesheet" href="styles.css">
 </head>
-<article class="scene is-active">
-  <h1 class="scene-number">Recovered evidence 01</h1>
-  <h2>Duff Bear Squad A</h2>
-  <img src="images/discovery-01-web.png" alt="Describe the evidence shown">
-  <div>
-    <h2>Mission Report</h2>
-  <p>We were set to explore the research dome to recover evidence before the dome collapsed.</p>
-  <p>On the journey to the dome we encountered several extraterrestrial life forms that seemed to be observing us.</p>
-  <p>.</p>  
-  <div\>
-</article>
-  <body\>
-    <main class="report-shell">
+
+<body>
+  <main class="report-shell">
+    <header>
+      <h1>First Expedition</h1>
+      <p>Expedition Report for Stalwart Inc.</p>
+    </header>
+
+    <article class="scene is-active">
+      <p class="scene-number">Recovered Evidence 01</p>
+
+      <h2>The First Discovery</h2>
+
+      <img
+        src="images/discovery-01-web.png"
+        alt="The hidden network discovered by the expedition team"
+      >
+
+      <p>
+        Our team discovered a hidden network that controls the entire
+        Solar System. We began investigating it to understand how it
+        worked and why it was created.
+      </p>
+    </article>
+
+    <article class="scene">
+      <p class="scene-number">Recovered Evidence 02</p>
+
+      <h2>An Unknown Encounter</h2>
+
+      <img
+        src="images/discovery-02-web.png"
+        alt="Four male explorers encountering unknown extraterrestrials"
+      >
+
+      <p>
+        While exploring the network, our team of four encountered
+        unknown extraterrestrials guarding the facility. They saw us
+        as a threat and attempted to stop our mission.
+      </p>
+    </article>
+
+    <article class="scene">
+      <p class="scene-number">Recovered Evidence 03</p>
+
+      <h2>Securing the Network</h2>
+
+      <img
+        src="images/discovery-03-web.png"
+        alt="Four male explorers working together to secure the network"
+      >
+
+      <p>
+        The situation became dangerous, but we worked together and
+        handled the threat. After securing the network, we collected
+        the information needed for Stalwart Inc.
+      </p>
+    </article>
+
+    <article class="scene">
+      <p class="scene-number">Recovered Evidence 04</p>
+
+      <h2>Mission Complete</h2>
+
+      <img
+        src="images/discovery-04-web.png"
+        alt="Four male explorers returning safely to their spacecraft"
+      >
+
+      <p>
+        All four members survived the expedition and returned safely
+        to the ship. The mission made us stronger and showed us the
+        importance of working together.
+      </p>
+    </article>
+
+    <div class="scene-controls">
+      <button id="previous-button" type="button">
+        Previous Evidence
+      </button>
+
+      <button id="next-button" type="button">
+        Next Evidence
+      </button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

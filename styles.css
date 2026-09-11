@@ -1,18 +1,128 @@
 :root {
-  --surface: #009dff;
+  --surface: #061016;
   --line: #0b1f29;
   --ink: #edf8fb;
   --signal: #59ddff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--surface);
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
 .report-shell {
   width: min(72rem, calc(100% - 2rem));
   margin: 0 auto;
+  padding: 2rem 0;
 }
-.background {
-  background-color: var(--surface);
-  color: var(--ink);
-  font-family: "Courier New", Courier, monospace;
-  line-height: 1.5;
-  padding: 2rem;
-}  
+
+header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+  color: var(--signal);
+  letter-spacing: 0.08rem;
+}
+
+header p {
+  margin-top: 0;
+}
+
+.scene {
+  display: none;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  opacity: 0;
+}
+
+.scene.is-active {
+  display: block;
+  border-color: var(--signal);
+  opacity: 1;
+  box-shadow: 0 0 18px rgba(89, 221, 255, 0.25);
+  animation: scene-in 320ms ease both;
+}
+
+.scene-number {
+  margin: 0;
+  color: var(--signal);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.scene h2 {
+  margin-top: 0.5rem;
+}
+
+.scene img {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  margin: 1rem 0;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.scene-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.scene-controls button {
+  padding: 0.75rem 1.25rem;
+  color: var(--surface);
+  background-color: var(--signal);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.scene-controls button:hover {
+  background-color: var(--ink);
+}
+
+.scene-controls button:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@keyframes scene-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .scene {
+    padding: 1rem;
+  }
+
+  .scene-controls {
+    flex-direction: column;
+  }
+
+  .scene-controls button {
+    width: 100%;
+  }
+}
